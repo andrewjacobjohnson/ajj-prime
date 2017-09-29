@@ -1,0 +1,77 @@
+
+body { 
+    background: #04151F; color: #8F857D; 
+}
+a { color: #798B96; }
+a:hover { color: #ADC7D6; }
+dl dt { color: #5C5552; }
+b { color: #BEDAEB; font-weight: normal; }
+
+
+body { margin: 50px auto; font-family: 'Source Code Pro', monospace; font-size: 12pt; }
+h1 { font-size: 12pt; padding: 0; margin-left: 2ch; display: inline; font-weight: normal; clear: none; }
+h1 span:before { content: "\"name\": \""; }
+h1 span:after { content: "\","; }
+main section:before { content: "let resume = {"; clear: both; display: table; }
+
+main { width: 800px; margin: 0 auto; }
+dl, dt, dd { margin: 0; padding: 0; }
+
+
+dt, dd { display: inline; }
+
+dl ol, dl ul, dl li { list-style: none; padding: 0; margin: 0; display: inline; }
+
+dd:after, ul:after, ol:after { display: table; clear: both; content: ""; }
+
+dl ul:before { content: "{"; }
+dl ul dl { padding-left: 2ch; }
+dl ul:after { padding-left: 2ch; }
+dl ul:last-child:after { content: "},"; }
+
+dl dt:before { clear: none; display: inline; }
+
+dt { float: left; }
+
+ol li dl:before { display: table; clear: both; content: "{"; }
+ol li dl:after { display: table; clear: both; content: "}"; float: left; }
+ol li:last-child dl:after { display: table; clear: both; content: "}"; float: none; }
+ul li:last-child:after, ol li:last-child:after { display: inline; clear: none; }
+
+
+dd ol li:after { content: ","; }
+
+dl ol:before { white-space: pre; content: "[\A"; }
+dl dd ol:last-child:after { padding-left: 2ch; content: "],"; display: inline; }
+dl dd:last-child ol:last-child:after { padding-left: 2ch; content: "]"; display: inline; }
+dl ol li dd:last-child span:after { content: "\""; }
+dl ol li dt span:after { content: "\":\00a0"; }
+dl ul li span:before { content: "\""; }
+dl ul li span:after { content: "\""; }
+dl ul li dt span:after { content: "\":\00a0"; }
+
+dl ol li:last-child:after { content: ""; }
+dl dl dd:last-child:after { content: ""; }
+
+li { padding-left: 2ch !important; }
+dl ol li { padding-left: 4ch !important; display: block; }
+dt { padding-left: 2ch !important; }
+
+dl ul dl dd:last-child span:after { content: "\""; }
+
+dt span:before { content: "\""; }
+dt span:after { content: "\":\00a0"; }
+dd span:before { content: "\""; clear: both; }
+dd span:after { content: "\","; }
+dd li:last-child span:after { content: "\","; }
+dd li:last-child dt span:after { content: "\":\00a0"; }
+dt { text-transform: lowercase; }
+
+
+ul:before { content: "{"; display: block; margin-bottom: -12pt; }
+ul:after { content: "},"; display: block; margin-top: -12pt; }
+ul li { margin: 0; padding: 0; position: relative; }
+section:after { content: "}"; }
+
+section { margin-left: 100px; }
+section::first-line { margin-left: 0; }
